@@ -37,7 +37,7 @@ public class Persona {
 //Metodo "toString" para imprimir toda la informacion de Persona----------------
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", f_nacimiento=" + f_nacimiento + '}';
+        return "Titular{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", f_nacimiento=" + f_nacimiento + '}';
     }
     
     

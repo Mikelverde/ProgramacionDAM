@@ -10,7 +10,7 @@ package prog_tarea_09;
  * @author Alf
  */
 public class CuentaBancaria {
-//Como CuentaBancaria va a ser la clase Super de odas las cuentas los atributos
+//Como CuentaBancaria va a ser la clase Super de todas las cuentas los atributos
 //de esta tienen que estar incluidos en todas las demas cuentas. por lo que los
 //atributos comunes a todos son titular, saldo y ccc    
     private Persona titular;
@@ -60,7 +60,7 @@ public class CuentaBancaria {
 //asociada a esa cuenta    
     @Override
     public String toString() {
-        return "CuentaBancaria{" + "titular=" + titular.toString() + ",\n saldo=" + saldo + ", ccc=" + ccc + '}';
+        return "CuentaBancaria{"+titular.toString() + ",\n saldo=" + saldo + ", ccc=" + ccc + '}';
     }
     
     
