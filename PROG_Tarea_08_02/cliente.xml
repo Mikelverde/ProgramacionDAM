@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><datos_cliente>
+    <id>X12345678F</id>
+    <nombre>nombre</nombre>
+    <apellidos>apellidos</apellidos>
+    <telefonos numeros_de_telefono="3">
+        <telefono>9123456789</telefono>
+        <telefono>612345678</telefono>
+        <telefono>+8212345678</telefono>
+    </telefonos>
+    <correos numeros_de_correos="2">
+        <correo>prueba@prueba.com</correo>
+        <correo>test@test.com</correo>
+    </correos>
+</datos_cliente>
