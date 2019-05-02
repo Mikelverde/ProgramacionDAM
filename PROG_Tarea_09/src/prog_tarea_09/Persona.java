@@ -21,6 +21,10 @@ public class Persona {
         this.apellidos = apellidos;
         this.f_nacimiento = f_nacimiento;
     }
+
+    Persona() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 //Metodos "get" para trabajar con los atributos de la clase---------------------
     public String getNombre() {
         return nombre;

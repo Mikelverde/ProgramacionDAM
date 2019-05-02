@@ -41,7 +41,7 @@ public class PROG_Tarea_09 {
         boolean fin = true;//para indicar el fin del programa
         boolean correcto;//se usa para repetir los bules donde se solicitan datos
         //para el bucle switch hasta que se introduzca una opcion correcta
-        
+
         String numero = "";//se usa en los metodos Pattern y Matcher
 //este bucle se ejecutara hasta que se pulse el 0 en la aplicacion y 
 //cambien la variable fin de trua a false
@@ -93,109 +93,126 @@ public class PROG_Tarea_09 {
 
                     switch (opcion02) {
                         case 1:
-                            try{
+                            try {
                                 //pide los datos necesarios para el tipo de cuenta
-                            Persona titular = pideTitular();
-                            CuentaBancaria cuenta = pideCuenta(titular);
-                            lista.add(cuenta);//añade la cuenta a la lista de cuentas
-                            }catch(Exception e){
+                                Persona titular = pideTitular();
+                                CuentaBancaria cuenta = pideCuenta(titular);
+                                lista.add(cuenta);//añade la cuenta a la lista de cuentas
+                            } catch (Exception e) {
                                 System.out.println("Dato incorrecto");
                             }
-                            
+
                             break;
                         case 2:
-                            try{
-                                 //pide los datos necesarios para el tipo de cuenta
-                            Persona titular02 = pideTitular();
-                            CuentaBancaria cuenta02 = pideCuenta(titular02);
-                            System.out.println("¿Cual va a ser el interes anual?");
-                            double int_anual = entrada.nextDouble();
-                            CuentaAhorro cuenta_a = new CuentaAhorro(titular02,
-                                    cuenta02.getSaldo(), cuenta02.getCcc(), int_anual);
-                            lista.add(cuenta_a);//añade la cuenta a la lista de cuentas
-                            }catch(Exception e){
+                            try {
+                                //pide los datos necesarios para el tipo de cuenta
+                                Persona titular02 = pideTitular();
+                                CuentaBancaria cuenta02 = pideCuenta(titular02);
+                                System.out.println("¿Cual va a ser el interes anual?");
+                                double int_anual = entrada.nextDouble();
+                                CuentaAhorro cuenta_a = new CuentaAhorro(titular02,
+                                        cuenta02.getSaldo(), cuenta02.getCcc(), int_anual);
+                                lista.add(cuenta_a);//añade la cuenta a la lista de cuentas
+                            } catch (Exception e) {
                                 System.out.println("Dato incorrecto");
                             }
-                            
+
                             break;
                         case 3:
-                             try{
-                                 //pide los datos necesarios para el tipo de cuenta
-                            Persona titular03 = pideTitular();
-                            CuentaBancaria cuenta03 = pideCuenta(titular03);
-                            CuentaCorriente cuenta_c = new CuentaCorriente(titular03,
-                                    cuenta03.getSaldo(), cuenta03.getCcc(), lista_entidades);
-                            lista.add(cuenta_c);//añade la cuenta a la lista de cuentas
-                            }catch(Exception e){
+                            try {
+                                //pide los datos necesarios para el tipo de cuenta
+                                Persona titular03 = pideTitular();
+                                CuentaBancaria cuenta03 = pideCuenta(titular03);
+                                CuentaCorriente cuenta_c = new CuentaCorriente(titular03,
+                                        cuenta03.getSaldo(), cuenta03.getCcc(), lista_entidades);
+                                lista.add(cuenta_c);//añade la cuenta a la lista de cuentas
+                            } catch (Exception e) {
                                 System.out.println("Dato incorrecto");
                             }
-                            
 
                             break;
                         case 4:
-                             try{
-                                  //pide los datos necesarios para el tipo de cuenta
-                            Persona titular04 = pideTitular();
-                            CuentaBancaria cuenta04 = pideCuenta(titular04);
-                            System.out.println("¿Cual va a ser la comision de mantenimiento?");
-                            double mantenimiento = entrada.nextDouble();
-                            CuentaCorrientePersonal cuenta_cp = new CuentaCorrientePersonal(titular04,
-                                    cuenta04.getSaldo(), cuenta04.getCcc(), lista_entidades, mantenimiento);
-                            lista.add(cuenta_cp);//añade la cuenta a la lista de cuentas
-                            }catch(Exception e){
+                            try {
+                                //pide los datos necesarios para el tipo de cuenta
+                                Persona titular04 = pideTitular();
+                                CuentaBancaria cuenta04 = pideCuenta(titular04);
+                                System.out.println("¿Cual va a ser la comision de mantenimiento?");
+                                double mantenimiento = entrada.nextDouble();
+                                CuentaCorrientePersonal cuenta_cp = new CuentaCorrientePersonal(titular04,
+                                        cuenta04.getSaldo(), cuenta04.getCcc(), lista_entidades, mantenimiento);
+                                lista.add(cuenta_cp);//añade la cuenta a la lista de cuentas
+                            } catch (Exception e) {
                                 System.out.println("Dato incorrecto");
                             }
-                           
+
                             break;
                         case 5:
-                             try{
-                                 //pide los datos necesarios para el tipo de cuenta
-                            Persona titular05 = pideTitular();
-                            CuentaBancaria cuenta05 = pideCuenta(titular05);
-                            System.out.println("¿Cual va a ser el interes por descubierto?");
-                            double int_descubierto = entrada.nextDouble();
-                            System.out.println("¿Cual va a ser el maximo descubierto permitido?");
-                            double max_descubierto = entrada.nextDouble();
-                            CuentaCorrienteEmpresa cuenta_ce = new CuentaCorrienteEmpresa(titular05,
-                                    cuenta05.getSaldo(), cuenta05.getCcc(), lista_entidades, int_descubierto, max_descubierto);
-                            lista.add(cuenta_ce);//añade la cuenta a la lista de cuentas
-                            }catch(Exception e){
-                                System.out.println("Dato incorrecto");
+                            try {
+                                //pide los datos necesarios para el tipo de cuenta
+                                Persona titular05 = pideTitular();
+                                CuentaBancaria cuenta05 = pideCuenta(titular05);
+                                System.out.println("¿Cual va a ser el interes por descubierto?");
+                                double int_descubierto = entrada.nextDouble();
+                                System.out.println("¿Cual va a ser el maximo descubierto permitido?");
+                                double max_descubierto = entrada.nextDouble();
+                                CuentaCorrienteEmpresa cuenta_ce = new CuentaCorrienteEmpresa(titular05,
+                                        cuenta05.getSaldo(), cuenta05.getCcc(), lista_entidades, int_descubierto, max_descubierto);
+                                lista.add(cuenta_ce);//añade la cuenta a la lista de cuentas
+                            } catch (Exception e) {
+
                             }
-                            
+
                             break;
 
                     }
 
                     break;
                 case 2:
+                    //con un bucle se imprimen toas las cuentas almacenadas en lista
                     for (CuentaBancaria cuenta : lista) {
                         System.out.println(cuenta.toString());
 
                     }
                     break;
                 case 3:
+                    //llamada al metodo que busca una cuenta
                     System.out.println(buscaCuenta(lista).toString());
 
                     break;
                 case 4:
-                    System.out.println("Importe del ingreso");
-                    double ingreso = entrada.nextDouble();
-                    CuentaBancaria cuenta_ingreso = buscaCuenta(lista);
-                    cuenta_ingreso.ingresar(ingreso);
-                    System.out.println("El nuevo saldo es de " + cuenta_ingreso.getSaldo());
+                    try {
+                        //se solicita la cantidad a ingresar para sumarla al saldo 
+                        System.out.println("Importe del ingreso");
+                        double ingreso = entrada.nextDouble();
+                        CuentaBancaria cuenta_ingreso = buscaCuenta(lista);
+                        cuenta_ingreso.ingresar(ingreso);
+                        System.out.println("El nuevo saldo es de " + cuenta_ingreso.getSaldo());
+                    } catch (Exception e) {
+                        System.out.println("Dato incorrecto");
+                    }
 
                     break;
 
                 case 5:
+                    try{
+                        ///se solicia la cantidad a retirar para restarla del saldo
                     System.out.println("Importe de la retirada");
                     double retirada = entrada.nextDouble();
                     CuentaBancaria cuenta_retirada = buscaCuenta(lista);
                     cuenta_retirada.retirar(retirada);
                     System.out.println("El nuevo saldo es de " + cuenta_retirada.getSaldo());
+                    }catch(Exception e){
+                        System.out.println("Dato incorrecto");
+                    }
+                    
                     break;
                 case 6:
-                    System.out.println("El saldo de su cuenta es de " + buscaCuenta(lista).getSaldo() + "€");
+                    try{
+                        System.out.println("El saldo de su cuenta es de " + buscaCuenta(lista).getSaldo() + "€");
+                    }catch(Exception e){
+                        System.out.println("Dato incorrecto");
+                    }
+                    
                     break;
                 case 0:
                     fin = false;
@@ -228,6 +245,14 @@ public class PROG_Tarea_09 {
 
     }
 
+    /**
+     * Este metodo solicita por consola los datos basicos de una cuenta bancaria
+     * el objeto padre de todas las demas cuentas. Introducimos un objeto
+     * persona con todos sus datos, de modo que asociamos la cuenta a un titular
+     *
+     * @param titular un objeto de la clase persona con los datos necesarios
+     * @return un objeto CuentaBancaria
+     */
     private static CuentaBancaria pideCuenta(Persona titular) {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Introduzca el numero de cuenta");
@@ -239,6 +264,15 @@ public class PROG_Tarea_09 {
         return cuenta;
     }
 
+    /**
+     * Este metodo necesita el parametro lista, que es un HsahSet con todas las
+     * cuentas que se van generando. despues se solicita por consola el numero
+     * de cuenta para buscar coincidencias en la lista de cuentas, cuando
+     * encuentra una coincidencia devuelve una cuenta
+     *
+     * @param lista un hashset con los datos de todas las cuentas
+     * @return un objeto cuenta bancaria que con el ccc que buscamos
+     */
     private static CuentaBancaria buscaCuenta(HashSet<CuentaBancaria> lista) {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Intoduzca el numero de cuenta");

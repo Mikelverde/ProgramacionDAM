@@ -48,11 +48,24 @@ public class CuentaBancaria {
     }
 //Metodos para gestionar la retirada o el ingreso de fondos---------------------   
     public double retirar(double retirar){
-        saldo=saldo-retirar;
+        //i se intenta retirar una cantidad negativa o mayor que el saldo
+        //disponible, la operacion no se realiza
+        if (retirar<=0 || retirar>this.getSaldo()){
+            System.out.println("no se puede realizar la operacion con ese valor");
+        }
+        else{
+            saldo=saldo-retirar;
+        }
+        
         return saldo;
     }
     public double ingresar(double ingresar){
-        saldo=saldo+ingresar;
+        if(ingresar<0){
+            System.out.println("no se puede realizar la operacion con ese valor");
+        }else{
+           saldo=saldo+ingresar; 
+        }
+        
         return saldo;
     }
 //Metodo "toString" para imprimir toda la informacion de Persona----------------
