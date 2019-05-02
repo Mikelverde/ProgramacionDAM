@@ -11,18 +11,21 @@ import java.util.HashMap;
  *
  * @author mikel
  */
-public class CuentaCorrientPersonal extends CuentaCorriente {
+public class CuentaCorrientePersonal extends CuentaCorriente {
 //El unico atributo que necesitamos y que no hereda es el interes
 //de mantenimiento    
+
     private double interes_mantenimiento;
 //Constructor de clase con los datos necesarios---------------------------------
-    public CuentaCorrientPersonal(Persona titular, double saldo, String ccc, HashMap entidades_auto,
+
+    public CuentaCorrientePersonal(Persona titular, double saldo, String ccc, HashMap entidades_auto,
             double interes_mantenimiento) {
- 
+
         super(titular, saldo, ccc, entidades_auto);
         this.interes_mantenimiento = interes_mantenimiento;
     }
 //Metodos "get" y "set"---------------------------------------------------------
+
     public double getInteres_mantenimiento() {
         return interes_mantenimiento;
     }
@@ -30,12 +33,5 @@ public class CuentaCorrientPersonal extends CuentaCorriente {
     public void setInteres_mantenimiento(double interes_mantenimiento) {
         this.interes_mantenimiento = interes_mantenimiento;
     }
-    
-    
 
-  
-    }
-    
-    
-    
-
+}

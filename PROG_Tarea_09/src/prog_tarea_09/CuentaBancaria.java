@@ -52,7 +52,7 @@ public class CuentaBancaria {
         return saldo;
     }
     public double ingresar(double ingresar){
-        saldo=saldo-ingresar;
+        saldo=saldo+ingresar;
         return saldo;
     }
 //Metodo "toString" para imprimir toda la informacion de Persona----------------
